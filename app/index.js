@@ -21,6 +21,7 @@ const itemBar = [
 ];
 
 let a = 20
+console.log("Hello Everyone, this is a test")
 const data =[
   {date:'March 15,2025', text:'Cardiology consultant', name:'Dr. Sarah Wilson',description:'Regular checkup and Ecg examination',color:'red'},
   {date:'Feb 1,2025', text:'Annual pjidvfdtyv', name:'Dr. Sarah Wilson',description:'Regular checkup and Ecg examination',color:'green'},
