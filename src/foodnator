@@ -1,0 +1,110 @@
+import { useState } from "react";
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
+export default function SignInScreen() {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSignIn = () => {
+    console.log("email:", email, "Password:", password);
+  };
+
+  const handleForgotPassword = () => {};
+
+  const handleSignUp = () => {};
+
+  return (
+    <ScrollView
+      style={{ backgroundColor: "#22C7A9", borderRadius: 20, flex: 1 }}
+    >
+      <View style={styles.container}>
+        <View style={styles.titleimage}>
+          <Image
+            source={require("../assets/images/food.png")}
+            style={{ width: 317, height: 250 }}
+          />
+        </View>
+
+        <Text
+          style={{
+            color: "white",
+            textAlign: "center",
+            fontSize: 30,
+            fontFamily: "georgia",
+            fontWeight: "bold",
+            marginBottom: 10,
+          }}
+        >
+          FOODIENATOR
+        </Text>
+
+        <Text
+          style={{
+            color: "black",
+            textAlign: "center",
+            fontSize: 13,
+            fontFamily: "arial",
+            marginBottom: 150
+          }}
+        >
+          Order Your Favourite Meal Here!
+        </Text>
+
+<View style={{flexDirection: "row", justifyContent: "center"}}>
+        <TouchableOpacity style={styles.button}>
+          <View style={{alignItems: "center"}}>
+          <Text style={{color: 'white', fontSize: 18, fontWeight: "bold",}}>Sign</Text>
+          </View>
+
+          </TouchableOpacity>
+
+<TouchableOpacity style={styles.button2}>
+          <View style={{alignItems: "center"}}>
+          <Text style={{color: 'black', fontSize: 18, fontWeight: "bold",}}>Register</Text>
+          </View>
+
+
+        </TouchableOpacity>
+        </View>
+      </View>
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#22C7A9",
+    borderRadius: 30,
+    flex: 1,
+  },
+  titleimage: {
+    marginTop: 100,
+    alignItems: "center",
+    padding: 10,
+    marginLeft: 30,
+  },
+  button: {
+    backgroundColor: '#2DB6A3',
+    height: 35,
+    width: 100,
+    borderTopLeftRadius: 10,  
+    borderBottomLeftRadius: 10,  
+    alignItems: "center",
+  flexDirection: "row",
+  justifyContent: "space-between",
+paddingHorizontal: 30,
+
+  },
+  button2: {
+    backgroundColor: '#DADADA',
+    height: 35,
+    width: 120,
+    borderBottomRightRadius: 10,
+    borderTopRightRadius: 10,    
+    alignItems: "center",
+  flexDirection: "row",
+  justifyContent: "space-between",
+paddingHorizontal: 30,
+  },
+});
