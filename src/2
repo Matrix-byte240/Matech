@@ -1,0 +1,72 @@
+import { useState } from "react";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+
+export default function SignInScreen() {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSignIn = () => {
+    console.log("email:", email, "Password:", password);
+  };
+
+  const Fruits = ["apple", "banana", "orange"];
+  const profile = ["ade", "bayo", 1, false];
+
+  console.log("The profile includes", profile);
+
+  const Fruit1 = { id: 1, name: "enoch", age: 10 };
+  console.log("This is the fruit", Fruit1.name);
+
+  const handleSignUp = () => {};
+
+  return (
+    <ScrollView
+      style={{ backgroundColor: "#22C7A9", borderRadius: 20, flex: 1 }}
+    >
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 19,
+            borderWidth: 1,
+          }}
+        >
+          <Text style={{ fontSize: 20, color: "white" }}>Click</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#22C7A9",
+    borderRadius: 30,
+    flex: 1,
+  },
+  titleimage: {
+    marginTop: 100,
+    alignItems: "center",
+    padding: 10,
+    marginLeft: 30,
+  },
+  button: {
+    backgroundColor: "#2DB6A3",
+    height: 35,
+    width: 100,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 30,
+  },
+});

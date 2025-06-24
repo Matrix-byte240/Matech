@@ -86,7 +86,7 @@ const index = () => {
             );
           }}
         />
-        
+    </View>
         <FlatList
         data={data}
         renderItem={({item,index}) => {
